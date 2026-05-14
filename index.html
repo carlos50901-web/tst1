@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Sua Loja de Eletrônicos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>🛍️ TechStore</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <a href="carrinho.html">
+                    🛒 Carrinho (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo à TechStore</h2>
+            <p>Os melhores produtos eletrônicos com os melhores preços!</p>
+            <a href="produtos.html" class="btn btn-primary">Ver Produtos</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Produtos em Destaque</h2>
+            <div class="products-grid" id="featured-products">
+                <!-- Produtos carregados por JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <h3>📦 Frete Rápido</h3>
+                <p>Entrega em até 7 dias úteis</p>
+            </div>
+            <div class="feature">
+                <h3>💳 Pagamento Seguro</h3>
+                <p>Compre com confiança e segurança</p>
+            </div>
+            <div class="feature">
+                <h3>🔄 Devolução Fácil</h3>
+                <p>30 dias para devolver seu produto</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-section">
+                <h4>Sobre Nós</h4>
+                <p>TechStore é sua loja online de confiança para eletrônicos de qualidade.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>📧 Email: contato@techstore.com</p>
+                <p>📱 Telefone: (11) 99999-9999</p>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <p>
+                    <a href="#">Facebook</a> | 
+                    <a href="#">Instagram</a> | 
+                    <a href="#">Twitter</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechStore. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="produtos-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
