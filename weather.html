@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherDash - Dashboard de Clima</title>
+    <link rel="stylesheet" href="weather-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🌤️ WeatherDash</h1>
+            <p>Dashboard de Clima em Tempo Real</p>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Digite o nome da cidade..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn">🔍 Buscar</button>
+            </div>
+            <button id="locationBtn" class="location-btn">📍 Minha Localização</button>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="error-message"></div>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Carregando dados...</p>
+        </div>
+
+        <!-- Main Weather Section -->
+        <div id="weather-content" class="weather-content hidden">
+            <!-- Current Weather -->
+            <section class="current-weather">
+                <div class="location-info">
+                    <h2 id="cityName"></h2>
+                    <p id="date-time"></p>
+                </div>
+
+                <div class="weather-main">
+                    <div class="temperature-section">
+                        <div class="temp-display">
+                            <span id="temperature" class="temperature"></span>
+                            <span class="unit">°C</span>
+                        </div>
+                        <img id="weather-icon" class="weather-icon" src="" alt="Ícone do clima">
+                    </div>
+
+                    <div class="weather-description">
+                        <p id="description" class="description"></p>
+                        <p id="feels-like" class="feels-like"></p>
+                    </div>
+                </div>
+
+                <!-- Weather Details Grid -->
+                <div class="weather-details">
+                    <div class="detail-box">
+                        <h3>💧 Umidade</h3>
+                        <p id="humidity" class="detail-value">--%</p>
+                    </div>
+                    <div class="detail-box">
+                        <h3>💨 Vento</h3>
+                        <p id="wind" class="detail-value">-- km/h</p>
+                    </div>
+                    <div class="detail-box">
+                        <h3>🔽 Pressão</h3>
+                        <p id="pressure" class="detail-value">-- hPa</p>
+                    </div>
+                    <div class="detail-box">
+                        <h3>👁️ Visibilidade</h3>
+                        <p id="visibility" class="detail-value">-- km</p>
+                    </div>
+                    <div class="detail-box">
+                        <h3>☀️ UV Index</h3>
+                        <p id="uv-index" class="detail-value">--</p>
+                    </div>
+                    <div class="detail-box">
+                        <h3>🌅 Nascer/Pôr</h3>
+                        <p id="sun-times" class="detail-value">--</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast -->
+            <section class="forecast">
+                <h2>⛅ Previsão 5 Dias</h2>
+                <div class="forecast-grid" id="forecast-grid">
+                    <!-- Forecast cards carregados por JavaScript -->
+                </div>
+            </section>
+
+            <!-- Hourly Forecast -->
+            <section class="hourly-forecast">
+                <h2>⏰ Previsão por Hora</h2>
+                <div class="hourly-grid" id="hourly-grid">
+                    <!-- Hourly data carregado por JavaScript -->
+                </div>
+            </section>
+
+            <!-- Air Quality -->
+            <section class="air-quality">
+                <h2>🌫️ Qualidade do Ar</h2>
+                <div class="aq-box">
+                    <div class="aq-index">
+                        <p class="aq-label">Índice AQI</p>
+                        <p id="aqi-value" class="aq-value">--</p>
+                    </div>
+                    <div class="aq-details">
+                        <p id="pm25" class="aq-detail">PM2.5: --</p>
+                        <p id="pm10" class="aq-detail">PM10: --</p>
+                        <p id="o3" class="aq-detail">O₃: --</p>
+                        <p id="no2" class="aq-detail">NO₂: --</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Welcome Message (Initial) -->
+        <div id="welcome" class="welcome">
+            <h2>Bem-vindo ao WeatherDash! 👋</h2>
+            <p>Busque uma cidade ou use sua localização para ver o clima em tempo real.</p>
+            <p class="hint">💡 Dica: Digite o nome de uma cidade no campo acima ou clique em "Minha Localização"</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Dados fornecidos por <strong>OpenWeatherMap API</strong></p>
+        <p>© 2026 WeatherDash. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="weather-script.js"></script>
+</body>
+</html>
